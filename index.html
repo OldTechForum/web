@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Премини на Линукс</title>
+<style>
+body{
+    padding: 0;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+    background-image: url("./UNITY/WALL.PNG");
+  background-color: orange;
+  position: absolute;
+  top: 0;
+}
+input{
+margin: 1%;
+}
+.hidden{
+    display:none;
+}
+
+.unhidden{
+    display:block;
+}
+.panel{
+    position: absolute;
+    top: 0;
+}
+.content3{
+    margin-bottom: 1%;
+}
+.desktop{
+
+}
+</style>
+<script type="text/javascript">
+function unhide(clickedButton, divID) {
+var item = document.getElementById(divID);
+if (item) {
+    if(item.className=='hidden'){
+        item.className = 'unhidden' ;
+        clickedButton.value = 'hide'
+    }else{
+        item.className = 'hidden';
+        clickedButton.value = 'unhide'
+    }
+}}
+</script>
+</head>
+<body>
+<div class="desktop">
+<div class="icon">
+<input type="image" src="./UNITY/ico1.png" width="4%" onclick="unhide(this, 'about') " value="unhide">
+</div>
+<div id="about" class="hidden">
+<div class="content3">
+<img src="./UNITY/UNITY.PNG" width="100%" margin="5%">
+<p>TEKST</p>
+</div>
+</div>
+<div class="panel">
+<!-- <img src="./UNITY/TOP.PNG"> -->
+</div>
+</div>
+</body>
+<body>
