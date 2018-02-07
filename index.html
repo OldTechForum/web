@@ -9,7 +9,7 @@ body{
     max-height: 100%;
     max-width: 100%;
     background-image: url("./UNITY/WALL.PNG");
-  background-color: orange;
+  background-color: #080851;
   position: absolute;
   top: 0;
 }
@@ -27,7 +27,10 @@ margin: 1%;
     position: absolute;
     top: 0;
 }
-.content3{
+.about{
+    margin-bottom: 1%;
+}
+.about1{
     margin-bottom: 1%;
 }
 .desktop{
@@ -52,12 +55,16 @@ if (item) {
 <div class="desktop">
 <div class="icon">
 <input type="image" src="./UNITY/ico1.png" width="4%" onclick="unhide(this, 'about') " value="unhide">
+<br>
+<input type="image" src="./UNITY/ico1.png" width="4%" onclick="unhide(this, 'about1') " value="unhide">
 </div>
 <div id="about" class="hidden">
-<div class="content3">
 <img src="./UNITY/UNITY.PNG" width="100%" margin="5%">
-<p>TEKST</p>
+<p>TEKST1</p>
 </div>
+<div id="about1" class="hidden">
+<img src="./UNITY/UNITY.PNG" width="100%" margin="5%">
+<p>TEKST2</p>
 </div>
 <div class="panel">
 <!-- <img src="./UNITY/TOP.PNG"> -->
