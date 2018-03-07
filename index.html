@@ -1,107 +1,63 @@
 <html>
-<head>
-<meta charset="utf-8">
-<title>Премини на Linux</title>
-<style>
-body{
-    padding: 0;
-    margin: 0 auto;
-    max-height: 100%;
-    max-width: 100%;
-    background-image: url("./UNITY/WALL.PNG");
-  background-color: #080851;
-  position: absolute;
-  top: 0;
-}
-/* taxbar taken from Dnomaid.co.uk for testing purposes */
-#taxbar {
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  background-color: #0F0F0F;
-  height: 30px;
-  width: 100%;
-  border-top: 1px solid #111;
-  z-index: 10;
-}
-#wrap{
-  background-color: #080851;
-  text-align:left;
-margin-top: 1;
-margin-left: 100;
-margin-right: 100;
-margin-bottom: 5;
-color: white;
-}
-input{
-margin: 1%;
-}
-.hidden{
-    display:none;
-}
-
-.unhidden{
-    display:block;
-}
-.panel{
-    position: absolute;
-    top: 0;
-}
-#about{
-    margin-bottom: 1%;
-}
-#about1{
-    margin-bottom: 1%;
-}
-</style>
+<meta charset="UTF-8"> 
+<link rel="stylesheet" type="text/css" href="style1.css">
 <script type="text/javascript">
-function unhide(clickedButton, divID) {
-var item = document.getElementById(divID);
-if (item) {
-    if(item.className=='hidden'){
-        item.className = 'unhidden' ;
-        clickedButton.value = 'hide'
-    }else{
-        item.className = 'hidden';
-        clickedButton.value = 'unhide'
-    }
-}}
+    function unhide(clickedButton, divID) {
+    var item = document.getElementById(divID);
+    if (item) {
+        if(item.className=='hidden'){
+            item.className = 'unhidden' ;
+            clickedButton.value = 'hide'
+        }else{
+            item.className = 'hidden';
+            clickedButton.value = 'unhide'
+        }
+    }}
 </script>
-</head>
+
 <body>
-<div class="desktop">
-<div class="icon">
-<input type="image" src="./ICONS/Home128.png" width="4%" onclick="unhide(this, 'about') " value="unhide">
-<input type="image" src="./ICONS/Download.png" width="4%" onclick="unhide(this, 'about1') " value="unhide">
+    <div class="icon">
+        <input type="image" src="cd.png" width="5%" onclick="unhide(this, 'about') " value="unhide">
+    </div>
+    <div class="icon">
+        <input type="image" src="terminal.png" width="5%" onclick="unhide(this, 'about1') " value="unhide">
+    </div>
+
+    <div id="about" class="hidden">
+        <div class="wrap">
+            <img src="fol1.png">
+            <div class="folder">
+                <iframe src="test.html" scrolling="yes"></iframe>
+            </div>
+
+        </div>
+    </div>
+ </div>
+
+    <div id="about1" class="hidden">
+        <div class="wrap">
+            <img src="fol2.png">
+            <div class="folder">
+<div class="iframe">
+<iframe src="https://www.youtube.com/embed/hlAScmDXZa4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
 </div>
-<div id="about" class="hidden">
-<div id="wrap">
-<h1>Приготовления</h1>
-<h2>Необходими неща за инсталиране</h2>
-<li>ДВД диск или флаш памет (флашка) с капацитет по-голям от 4 Гигабайта
-<li>Работещ компютър
-<li>Достъп до Интернет
-<h2>Зареждане на Linux</h2>
-<p>За инсталацията ще Ви е нужно да инсталирате Линукс на диск или флашка (която е празна) чрез UnetBootin (ЮнетБуутин; налична за всички операционни системи). Поставете диска в ДВД устройството или включете флашката във Вашия компютър. Препоръчваме да изберете „Lubuntu“ (за стари и нови компютри) или „Linux Mint“. Те са базирани на известния „Убунту“, разработен от Каноникъл. Може да намерите различни дистрибуции на <a href="http://www.distrowatch.com">www.distrowatch.com</a>. След като сте си избрали дистрибуцията по Ваш вкус и сте приготвили инсталационният носител е време за инсталация.</p>
-<img src="./UNITY/UNET1.png" width="393" height="294" alt="Unetbootin Интерфейс">
-</div>
-</div>
-<div id="about1" class="hidden">
-<div id="wrap">
-<h2>Инсталация</h2>
-<p>Включете Вашия компютър докато задържате (зависи от производителя) F8, F12, F11 или Enter, за да изберете от кое устройство да зареди инсталацията. Когато се покаже списък с устройства, изберете Вашето ДВД устройство или флашка, като навигирате менюто със навигационните стрелки на клавиатурата и избирате с Enter. След това според избраната дистрибуция инсталатора може да изглежда различно, но би трябвало да има опции за промяна на езика, проба и инсталиране на екрана.</p>
-<img src="./UNITY/CDBOOT.png" alt="Текстов инсталационен интерфейс">
-<p>Ако желаете може първо да пробвате дистрибуцията директно от инсталационния носител или да инсталирате операционната система.</p>
-<img src="./UNITY/CDBOOT2.png" alt="Графиен инсталационен интерфейс">
-<p>Ако сте избрали дистрибуция базирана на Убунту изберете да се инсталира софтуер от трети лица.</p>
-<img src="./UNITY/CDBOOT3.png" alt="Графиен инсталационен интерфейс">
-След това ако искате на този компютър да работи само Линукс изберете втората опция, която ще форматира целия твърд диск и единственото което ще има на него ще бъде Линукс. За някои по-стари програми или такива, които нямат поддръжка за Линукс, може да изберете опцията за инсталиране на Убунту заедно с Уиндоус, която е на първа позиция.После ще се появи на екрана схема за разпределяне на твърдия диск. Тук може да определите с колко дисково пространство разполага Убунту. За използваема система препоръчваме над 32ГБ за Линукс.След като разпределите пространството, на екрана ще се появи карта на света, а под нея – поле за въвеждане. Там (ако не е въведено вече) може да въведете „Sofia“, за да използва Вашия компютър българското време. Настройването на клавиатурата следва. Има няколко начина за въвеждане на български: по БДС (Български Държавен Стандарт) или фонетична традиционна. Клавишите по БДС са маркирани на всички български клавиатури (в долния ъгъл на клавиша Последния екран. Тук се въвеждат данни за потребителя. В първото поле въведете името си, а във второто името на компютъра. То ще се използва, когато комуникира с други компютри в локалната мрежа. В четвърто поле въведете парола. Препоръчваме между 8-12 символа и да съдържа ГЛАВНИ, малки букви, цифри и специални знаци (!@№$%€§*). Също препоръчваме и да не избирате опцията за автоматичен вход.</p>
-<p>Това беше за инсталацията. Сега може да си починете, да изпиете по едно кафе, защото ще отнеме около половин час. След като компютъра се рестартира ще се появи екран с няколко опции от които първата е „Ubuntu“, а последната – версията на Уиндоус, която сте имали инсталирана.</p>
-</div>
-</div>
-<div class="panel">
-<!-- <img src="./UNITY/TOP.PNG"> -->
-</div>
-</div>
+        </div>
+    </div>
+ </div>
+
+    <div class="panel">
+        <div class="lpan">
+            <img src="panel.png">
+        </div>
+        <div class="rpan">
+            <img src="panel2.png">
+        </div>
+        <div class="panelb">
+            <img src="panelB.png">
+        </div>
+    </div>
+    </div>
 </body>
+
 </html>
